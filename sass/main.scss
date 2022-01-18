@@ -1,0 +1,36 @@
+
+
+//***** variables *****
+
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+
+
+//***** maps *****
+
+$breakpoints: (
+    mobile: 768px,
+    desktop: 992px,
+);
+
+
+//***** mixins *****
+
+@mixin mobile {
+    @media (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablette {
+    @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
