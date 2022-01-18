@@ -1,0 +1,22 @@
+{
+  "name": "alexandremeurot_3_20012022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kacatoumou/AlexandreMeurot_3_20012022.git"
+  },
+  "keywords": [
+    "OC_P3"
+  ],
+  "author": "Alexandre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kacatoumou/AlexandreMeurot_3_20012022/issues"
+  },
+  "homepage": "https://github.com/kacatoumou/AlexandreMeurot_3_20012022#readme"
+}
