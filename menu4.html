@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Normalize-->
+    <link rel="stylesheet" href="css/Normalize.css"/>
+    
+    <!-- style.css-->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Polices Logo et titres: Shrikhand (font-family: 'Shrikhand', cursive;) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    
+    <!-- Polices Texte : Roboto (font-family: 'Roboto', sans-serif;) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Kit logo FontAwesome -->
+    <script src="https://kit.fontawesome.com/dd854b3b27.js" crossorigin="anonymous"></script>
+    
+    <title>Ohmyfood!</title>
+
+</head>
+
+<body>
+
+    <!----------------------------------------- HEADER ----------------------------------------->
+
+    <header>
+
+        <div class="header__logo"><a href="./index.html"><i class="fas fa-arrow-left"></i></a></div>
+        <div class="header__titre"><h1>ohmyfood</h1></div>
+
+    </header>
+
+    <main>
+
+        <!----------------------------------------- BANNIERE ----------------------------------------->
+
+        <section class="banniere">
+            <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo restaurant Le délice des sens"/>
+        </section>
+
+        <!----------------------------------------- RESTAURANT ----------------------------------------->
+
+        <section class="menu">
+
+            <div class="menu__titre">
+                <div class="menu__titre__texte"><h1>Le délice des sens</h1></div>
+                <div class="menu__titre__logo coeur"><i class="far fa-heart"></i></div>
+            </div>
+
+            <!----------------------------------------- ENTREES ----------------------------------------->
+
+            <div class="menu__carte">
+                
+                <div class="menu__carte__titre">Entrées</div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Tartare de thon</h2>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">25€</div>
+                </div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Bouchée de homard croustillant</h2>
+                        <p>Et sa farandole de petits légumes</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">35€</div>
+                </div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Velouté de cèpes</h2>
+                        <p>Aux truffes</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">20€</div>
+                </div>
+            
+            </div>
+
+            <!----------------------------------------- PLATS ----------------------------------------->
+
+            <div class="menu__carte">
+                
+                <div class="menu__carte__titre">Plats</div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Poulet rôti aux herbes de Provence</h2>
+                        <p>Et sa crème de truffe</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">40€</div>
+                </div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Langouste rôtie</h2>
+                        <p>Et ses légumes de saison</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">35€</div>
+                </div>
+                
+                <div class="menu__carte">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Côte de boeuf Angus</h2>
+                        <p>Et sa purée de panais</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">44€</div>
+                </div>
+            
+            </div>
+
+            <!----------------------------------------- DESSERTS ----------------------------------------->
+
+            <div class="menu__carte">
+                
+                <div class="menu__carte__titre">Desserts</div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Farandole de desserts</h2>
+                        <p>Du chef</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">18€</div>
+                </div>
+                
+                <div class="menu__carte__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Crème brulée</h2>
+                        <p>Revisitée</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">22€</div>
+                </div>
+                
+                <div class="menu__carte__choix__choix">
+                    <div class="menu__carte__choix__texte">
+                        <h2>Tiramisu</h2>
+                        <p>À la noisette</p>
+                    </div>
+                    <div class="menu__carte__choix__prix">23€</div>
+                </div>
+            
+            </div>
+
+            <div class="menu__bouton bouton"><input type="submit" id="button" value="Commander" /></div>
+
+        </section>
+
+        <!----------------------------------------- FOOTER ----------------------------------------->
+
+        <footer class="footer">
+
+            <div class="footer__logo"></div>
+            <div class="footer__nav">
+
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </footer>
+
+    </main>
+    
+</body>
+
+</html>
