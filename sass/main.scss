@@ -5,9 +5,11 @@
 $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
+$background-color: white;
 
 $police-logo-titre: 'Shrikhand', cursive;
 $police-texte: 'Roboto', sans-serif;
+
 
 
 //***** maps *****
@@ -20,12 +22,6 @@ $breakpoints: (
 
 //***** mixins *****
 
-@mixin mobile {
-    @media (max-width: map-get($breakpoints, mobile)) {
-        @content;
-    }
-}
-
 @mixin tablette {
     @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
         @content;
@@ -37,3 +33,134 @@ $breakpoints: (
         @content;
     }
 }
+
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin logo-style {
+    font-family: $police-logo-titre;
+    font-size: 45px;
+}
+
+@mixin h2-style {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+@mixin localisation-style($color: $background-color) {
+    background-color: darken($color, 20%);
+    height: 40px;
+    @include display-center()
+}
+
+@mixin presentation-style($color: $background-color) {
+    background-color: darken($color, 10%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+@mixin localisation-box-shadow($color: $background-color) {
+    box-shadow: inset 0px 3px rgba(85, 85, 85, 0.486);
+}
+
+@mixin input-style {
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+}
+
+@mixin bouton-style {
+    height: 40px;
+    width: 180px;
+    background-color: $couleur-primaire;
+    color: $background-color;
+    border-radius: 20px 20px 20px 20px;
+    font-weight: bold;
+}
+
+@mixin fonctionnement-li-style($color: $background-color) {
+    background-color: darken($color, 10%);
+    display: flex;
+
+    align-items: center;
+    height: 50px;
+    width: 95%;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+
+//***************************** 
+
+
+body{
+    font-family: $police-texte;    
+    
+    h2{
+        @include h2-style();
+    }
+}
+
+.header{
+    
+    &__titre{
+        height: 70px;
+        @include display-center();
+        
+        h1{
+            @include logo-style()
+        }
+    }
+    
+    &__localisation{
+        @include localisation-style();
+        @include localisation-box-shadow();
+        input{
+            @include input-style();
+        }
+    }
+    
+    &__presentation{
+        @include presentation-style();
+        
+        &__titre, &__texte{
+            width: 75%;
+        }
+
+        input{
+            @include bouton-style();
+        }
+    }
+}
+
+.fonctionnement{
+    height: 200px;
+    margin: 30px 0 30px 0px;
+    
+    &__nav{
+        height: 100%;
+        
+        &__puces{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+            &__puce{
+                @include fonctionnement-li-style();
+                box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+            }
+        }
+    }
+}
+
+
+
