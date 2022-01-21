@@ -1,0 +1,34 @@
+.footer{
+    height: 200px;
+    background-color: rgb(53, 53, 53);
+    padding-top: 20px;
+
+    &__logo{
+        h1{
+            @include logo-style(20px);
+            color: $footer-texte-color;
+            margin: 0 0 20px 20px;
+        }
+    }
+
+    &__nav{
+        height: 75%;
+        margin-left: 20px;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+
+            a{
+                display: flex;
+                flex-direction: row;
+                color: $footer-texte-color;
+                margin-bottom: 10px;
+
+                i{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

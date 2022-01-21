@@ -1,0 +1,118 @@
+@mixin tablette {
+    @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin logo-style($size) {
+    font-family: $police-logo-titre;
+    font-size: $size;
+}
+
+@mixin h2-style {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@mixin h3-style {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@mixin localisation-style($color: $background-color) {
+    background-color: darken($color, 10%);
+    height: 50px;
+    @include display-center()
+}
+
+@mixin presentation-style($color: $background-color) {
+    background-color: darken($color, 5%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+@mixin localisation-box-shadow($color: $background-color) {
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.125);
+}
+
+@mixin box-shadow {
+    box-shadow: 3px 5px 5px $color-shadow;
+}
+
+@mixin localisation-input-style {
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+}
+
+@mixin bouton-style {
+    height: 40px;
+    width: 180px;
+    background: linear-gradient(170deg, $couleur-secondaire, $couleur-primaire);
+    color: $background-color;
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+    font-weight: bold;
+    box-shadow: 4px 4px 6px $color-shadow;
+}
+
+@mixin fonctionnement-li-style($color: $background-color) {
+    background-color: darken($color, 5%);
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 90%;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+@mixin restaurants-style($color: $background-color) {
+    background-color: darken($color, 5%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@mixin carte-style($color: $background-color) {
+    width: 350px;
+    height: 250px;
+    margin-top: 20px;
+    background-color: $color;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 4px 4px 6px $color-shadow;
+}
+
+@mixin bouton-nouveau {
+    @include display-center;
+    @include box-shadow;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    width: 90px;
+    background-color: $couleur-tertiaire;
+    border-radius: 3px;
+    color: darken($couleur-tertiaire, 40%);
+    font-weight: bold;
+}

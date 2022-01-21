@@ -1,0 +1,11 @@
+.bouton-fonctionnement:hover{
+    background-color: lighten($couleur-primaire, 33%);
+    
+    i{
+        color: $couleur-primaire;
+    }
+}
+
+.bouton-nouveau{
+    @include bouton-nouveau;
+}
