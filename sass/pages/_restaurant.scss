@@ -1,4 +1,23 @@
+.header-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+    .header__logo{
+        font-size: 25px;
+        text-align: left;
+        padding-left: 20px;
+
+        a{
+            color: black;
+        }
+    }
+
+    .header__titre{
+        width: 100%;
+        text-align: center;
+    }
+}
 
 .banniere{
     width: 100%;
@@ -14,8 +33,12 @@
 }
 
 .menu{
-    background-color: darken($background-color, 10%);
-    border-radius: 20px 20px 0 0;
+    background-color: darken($background-color, 5%);
+    border-radius: 35px 35px 0 0;
+    padding-bottom: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: -60px;
     
     &__titre{
         display: flex;
@@ -44,6 +67,7 @@
         align-items: center;
         
         &__titre{
+            width: 100%;
             
             p{
                 text-transform: uppercase;
@@ -53,5 +77,9 @@
                 padding-bottom: 5px;
             }
         }
+    }
+
+    &__bouton{
+        margin-top: 30px;
     }
 }
