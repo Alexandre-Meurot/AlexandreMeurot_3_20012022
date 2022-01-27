@@ -1,3 +1,4 @@
+
 .header{
     
     &__titre{
@@ -30,6 +31,9 @@
     height: 300px;
     margin: 30px 0 30px 0px;
     padding: 30px 0 50px 0;
+    @include desktop {
+        display: none;
+    }
     
     &__nav{
         height: 100%;
@@ -48,7 +52,7 @@
                 &__nombre{
                     background-color: $couleur-primaire;
                     color: $background-color;
-                    font-size: 18px;
+                    font-size: $texte-size;
                     width: 25px;
                     height: 20px;
                     border-radius: 20px;
@@ -88,9 +92,19 @@
     
     &__cartes{
         @include display-column-center();
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 30px 0 30px 0;
+        }
     
         &__carte{
             @include carte-style();
+            @include desktop{
+                margin: 20px;
+            }
             
             &__image{
                 height: 170px;

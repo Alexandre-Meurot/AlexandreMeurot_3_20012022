@@ -1,5 +1,5 @@
 body{
-    font-family: $police-texte;    
+    font-family: $police-texte;
     
     h2{
         @include h2-style();
@@ -10,7 +10,7 @@ body{
     }
 
     p{
-        font-size: 18px;
+        font-size: $texte-size;
     }
 
     .titre{
