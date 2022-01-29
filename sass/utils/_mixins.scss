@@ -31,23 +31,8 @@
     font-size: 20px;
 }
 
-@mixin localisation-style($color: $background-color) {
-    background-color: darken($color, 10%);
-    height: 50px;
-    @include display-center()
-}
-
-@mixin localisation-box-shadow($color: $background-color) {
-    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.125);
-}
-
 @mixin box-shadow {
     box-shadow: 3px 5px 5px $color-shadow;
-}
-
-@mixin localisation-input-style {
-    border-radius: 10px 10px 10px 10px;
-    border: none;
 }
 
 @mixin presentation-style($color: $background-color) {
@@ -69,15 +54,6 @@
     width: 90%;
     border-radius: 20px 20px 20px 20px;
 
-}
-
-@mixin restaurants-style($color: $background-color) {
-    background-color: darken($color, 5%);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @include desktop(){
-        background-color: $background-color;
-    }
 }
 
 @mixin carte-style($color: $background-color) {

@@ -1,4 +1,8 @@
-.header-menu{
+/*------------------------------------*\
+                HEADER
+\*------------------------------------*/
+
+.header--restaurant{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,6 +23,11 @@
     }
 }
 
+
+/*------------------------------------*\
+                BANNIERE
+\*------------------------------------*/
+
 .banniere{
     width: 100%;
     height: 300px;
@@ -32,6 +41,11 @@
         object-fit: cover;
     }
 }
+
+
+/*------------------------------------*\
+            MENU RESTAURANT
+\*------------------------------------*/
 
 .menu{
     background-color: darken($background-color, 5%);
@@ -62,17 +76,18 @@
         }
     }
 
-    &__carte{
+    &__list{
         display: flex;
         flex-direction: column;
         align-items: center;
+        animation: slideDown 2s;
         
         &__titre{
             width: 100%;
             
             p{
                 text-transform: uppercase;
-                border-bottom: 4px solid $couleur-tertiaire;
+                border-bottom: 4px solid $tertiary-color;
                 width: 40px;
                 margin: 20px;
                 padding-bottom: 5px;

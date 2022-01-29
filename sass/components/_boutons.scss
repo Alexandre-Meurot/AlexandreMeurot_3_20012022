@@ -1,10 +1,14 @@
+/*------------------------------------*\
+            BOUTON PRINCIPAL
+\*------------------------------------*/
+
 .bouton-violet{
     text-align: center;
     
     input{
         height: 40px;
         width: 180px;
-        background: linear-gradient(170deg, $couleur-secondaire, $couleur-primaire);
+        background: linear-gradient(170deg, $secondary-color, $primary-color);
         color: $background-color;
         border: none;
         border-radius: 20px 20px 20px 20px;
@@ -14,23 +18,72 @@
         &:hover{
             background: linear-gradient(
                 170deg, 
-                lighten($couleur-secondaire, 5%),
-                lighten($couleur-primaire, 5%)
+                lighten($secondary-color, 5%),
+                lighten($primary-color, 5%)
             );
             box-shadow: 4px 4px 4px $color-shadow2;
         }
     }
 }
 
-.bouton-fonctionnement:hover{
-    background-color: lighten($couleur-primaire, 33%);
-    
-    i{
-        color: $couleur-primaire;
+
+/*------------------------------------*\
+         BOUTON FONCTIONNEMENT
+\*------------------------------------*/
+
+.fonctionnement__btn{
+    @include fonctionnement-li-style();
+    @include box-shadow;
+
+    &:hover{
+        background-color: lighten($primary-color, 33%);
+
+        i{
+            color: $primary-color;
+        }
+    }
+
+    &__number{
+        background-color: $primary-color;
+        color: $background-color;
+        font-size: $texte-size;
+        width: 25px;
+        height: 20px;
+        border-radius: 20px;
+        margin-left: -10px;
+        text-align: center;
+        padding-top: 3px;
+    }
+
+    &__body{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: center;
+
+        i{
+            color: darken($background-color, 50%);
+            margin-left: 20px;
+
+        }
+
+        &__txt{
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            margin-left: -20px;
+
+        }
     }
 }
 
-.bouton-nouveau{
+
+/*------------------------------------*\
+            BOUTON NOUVEAU
+\*------------------------------------*/
+
+.new__btn{
     @include display-center;
     @include box-shadow;
     position: absolute;
@@ -38,13 +91,18 @@
     right: 20px;
     height: 30px;
     width: 90px;
-    background-color: $couleur-tertiaire;
+    background-color: $tertiary-color;
     border-radius: 3px;
-    color: darken($couleur-tertiaire, 40%);
+    color: darken($tertiary-color, 40%);
     font-weight: bold;
 }
 
-.bouton-choix{
+
+/*------------------------------------*\
+        BOUTON MENU RESTAURANT
+\*------------------------------------*/
+
+.menu__btn{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,7 +118,7 @@
         text-overflow: ellipsis;
     }
     
-    .menu__carte__choix__texte{
+    .menu__btn__texte{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -72,32 +130,29 @@
         }
     }
     
-    .menu__carte__choix__slide{
+    .menu__btn__slide{
         display: flex;
-        width: 11rem;
-        transition: margin 0.2s ease-in-out;
-        margin: -1rem -7rem -1rem auto;
-
+        align-items: center;
+  
         &__prix{
-            flex: 1;
             align-self: flex-end;
-            padding-right: 1.2rem;
-            padding-bottom: 1rem;
-            padding-left: 0.8rem;
+            margin: 0 -70px 10px 0;
             font-weight: bold;
-            text-align: right;
-            margin: 10px;
         }
 
         &__check{
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 6rem;
-            font-size: 2rem;
-            background-color: $couleur-tertiaire;
+            font-size: 30px;
+            background-color: $tertiary-color;
             color: $background-color;
-
+            width: 80px;
+            height: 100%;
+            transform: scaleX(0);
+            transform-origin: 100% 50%;
+            transition: transform 130ms ease-in-out;
+            
             .fas {
                 transition: transform 0.4s ease-in-out;
                 transition-delay: 0.10s;
@@ -107,11 +162,17 @@
     }
 
     &:hover{
-        .menu__carte__choix__slide{
-            margin-right: -1rem;
+
+        .menu__btn__slide__prix{
+            margin-right: 10px;
+            transition-duration: 130ms;
         }
 
-        .menu__carte__choix__slide__check .fas{
+        .menu__btn__slide__check{
+            transform: scaleX(1);
+        }
+
+        .menu__btn__slide__check .fas{
             transform: rotate(0);
         }
     }
