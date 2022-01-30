@@ -3,8 +3,10 @@
 @import "./utils/mixins";
 @import "./utils/keyframes";
 @import "./base/base";
+@import "./components/loading";
 @import "./components/boutons";
 @import "./components/cards";
+@import "./components/heart";
 @import "./layouts/footer";
 @import "./pages/accueil";
 @import "./pages/restaurant";

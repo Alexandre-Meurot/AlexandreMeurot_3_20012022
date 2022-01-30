@@ -1,0 +1,18 @@
+.heart{
+    color: $texte-color;
+    font-size: 30px;
+    margin: 15px;
+    position: relative;
+    
+    .far:hover + .fas{
+        animation: heart-cover ease-in-out 400ms;
+        animation-fill-mode: forwards;
+    }
+
+    .fas{
+        position: absolute;
+        right: 0.5px;
+        color: $primary-color;
+        z-index: -1;
+    }
+}

@@ -11,19 +11,25 @@
         font-size: 25px;
         justify-self: flex-start;
         padding-left: 20px;
-
-        a{
-            color: $texte-color;
-        }
     }
 
     .header__titre{
         width: 100%;
         justify-self: center;
     }
+
+    a{
+        color: $texte-color;
+    }
 }
 
-
+.main--restaurant{
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /*------------------------------------*\
                 BANNIERE
 \*------------------------------------*/
@@ -54,6 +60,10 @@
     width: 100%;
     position: relative;
     margin-top: -60px;
+
+    @include desktop{
+        width: 80%;
+    }
     
     &__titre{
         display: flex;
@@ -81,9 +91,19 @@
         flex-direction: column;
         align-items: center;
         animation: slideDown 2s;
+
+        @include desktop{
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
         
         &__titre{
             width: 100%;
+
+            @include desktop{
+                width: 20%;
+            }
             
             p{
                 text-transform: uppercase;

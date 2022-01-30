@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Normalize-->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css"/>
 
     <!-- style.css-->
     <link rel="stylesheet" href="./css/style.css">
@@ -29,6 +29,12 @@
     <title>Ohmyfood!</title>
 
 </head>
+
+<!---------------------------------------- SPINNER ---------------------------------------->
+
+<div class="loading">
+    <span class="loading__spinner"></span>
+</div>
 
 <body>
 
@@ -66,7 +72,7 @@
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             </div>
             <div class="bouton-violet">
-                <input type="submit" id="button" value="Explorer nos restaurants"/>
+                <a href="#restaurants"><input type="submit" id="button" value="Explorer nos restaurants"/></a>
             </div>
 
         </section>
@@ -126,7 +132,7 @@
 
         <!----------------------------------------- RESTAURANTS ----------------------------------------->
 
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
 
             <h2 class="titre">Restaurants</h2>
             
@@ -148,7 +154,7 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <div class="restaurants__card__body__logo">
+                            <div class="restaurants__card__body__logo heart">
                                 <i class="far fa-heart"></i>
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -173,8 +179,9 @@
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </div>
-                            <div class="restaurants__card__body__logo">
+                            <div class="restaurants__card__body__logo heart">
                                 <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>
                         </div>
                     </a>
@@ -194,7 +201,9 @@
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <div class="restaurants__card__body__logo"><i class="far fa-heart coeur"></i>
+                            <div class="restaurants__card__body__logo heart">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>
                         </div>
                     </a>
@@ -214,7 +223,9 @@
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <div class="restaurants__card__body__logo"><i class="far fa-heart coeur"></i>
+                            <div class="restaurants__card__body__logo heart">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>
                         </div>
                     </a>
@@ -260,7 +271,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="mailto:hello@openclasssrooms.com">
                             <p>Contact</p>
                         </a>
                     </li>
