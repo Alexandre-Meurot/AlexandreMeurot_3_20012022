@@ -3,11 +3,6 @@
     font-size: 30px;
     margin: 15px;
     position: relative;
-    
-    .far:hover + .fas{
-        animation: heart-cover ease-in-out 400ms;
-        animation-fill-mode: forwards;
-    }
 
     .fas{
         position: absolute;
@@ -15,4 +10,10 @@
         color: $primary-color;
         z-index: -1;
     }
+    
+    .far:hover + .fas{
+        animation: heart-cover ease-in-out 400ms;
+        animation-fill-mode: forwards;
+    }
+
 }

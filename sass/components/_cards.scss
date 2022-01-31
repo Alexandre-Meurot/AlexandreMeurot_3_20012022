@@ -55,5 +55,10 @@
             }
         }
     }
+
+    &:hover{
+        animation: shadow-cover ease-in-out 300ms;
+        animation-fill-mode: forwards;
+    }
 }
 

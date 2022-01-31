@@ -197,3 +197,24 @@
         }
     }
 }
+
+/* Animation Slide-down sur chaque btn avec un delai entre chaque */
+
+.slide-1{
+    animation: slideDown 2s;
+}
+
+.slide-2{
+    animation: slideDown 2s;
+    animation-delay: 300ms;
+}
+
+.slide-3{
+    animation: slideDown 2s;
+    animation-delay: 600ms;
+}
+
+.slide-4{
+    animation: slideDown 2s;
+    animation-delay: 900ms;
+}
