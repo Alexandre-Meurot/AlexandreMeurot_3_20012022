@@ -19,6 +19,16 @@
     input{
         border-radius: 10px 10px 10px 10px;
         border: none;
+        width: 140px;
+        background-color: darken($background-color, 10%);
+
+        &::placeholder{
+            opacity: 1;
+            color: $texte-color;
+            font-family: $police-texte;
+            font-size: $texte-size;
+            font-weight: bold;
+        }
     }
 }
 
